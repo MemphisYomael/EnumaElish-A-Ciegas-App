@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using CommunityToolkit.Maui.Markup;
 using EnumaElishApp.MVVM.Models;
 using EnumaElishApp.MVVM.ViewModels;
@@ -11,6 +12,7 @@ public partial class CarrucelDeNivelesModoHistoria : ContentPage
 {
     private CarrucelNivelesHistoriaViewModel _viewModel;
 
+   
     public CarrucelDeNivelesModoHistoria()
     {
         _viewModel = new CarrucelNivelesHistoriaViewModel();
@@ -501,6 +503,8 @@ public partial class CarrucelDeNivelesModoHistoria : ContentPage
                     Brush = Color.FromArgb(colorBoton).AsPaint()
                 }
             }
+            //}.BindCommand("HistoriaNarrativaView")
+            //    .Bind(Button.CommandParameterProperty, source: nivel)
         };
     }
     enum RowPrincipal { Header, Content }

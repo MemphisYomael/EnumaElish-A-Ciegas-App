@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\viewmodels\\carrucelniveleshistoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\viewmodels\\carrucelniveleshistoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\views\\c#\\homeloby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\views\\c#\\homeloby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\models\\escenahistoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\models\\escenahistoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\views\\xaml\\carruceldenivelesmodohistoria.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|c:\\users\\usuario\\desktop\\personal\\enumaelishapp\\mvvm\\models\\nivelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03DA9DDD-78D9-4F30-8604-BE520CD87B8F}|EnumaElishApp.csproj|solutionrelative:mvvm\\models\\nivelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,64 +34,64 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeLoby.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\C#\\HomeLoby.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\C#\\HomeLoby.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\C#\\HomeLoby.cs",
-              "RelativeToolTip": "MVVM\\Views\\C#\\HomeLoby.cs",
-              "ViewState": "AgIAAHoBAAAAAAAAAAAmwBQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T19:06:21.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\ViewModels\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "MVVM\\ViewModels\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\ViewModels\\HomeViewModel.cs",
-              "RelativeToolTip": "MVVM\\ViewModels\\HomeViewModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T18:57:04.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CarrucelDeNivelesModoHistoria.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
-              "RelativeToolTip": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T18:21:23.366Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CarrucelNivelesHistoriaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\ViewModels\\CarrucelNivelesHistoriaViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\CarrucelNivelesHistoriaViewModel.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\ViewModels\\CarrucelNivelesHistoriaViewModel.cs",
               "RelativeToolTip": "MVVM\\ViewModels\\CarrucelNivelesHistoriaViewModel.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAcwJ4BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T18:03:33.921Z"
+              "WhenOpened": "2025-06-16T22:15:26.36Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "CarrucelDeNivelesModoHistoria.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
+              "RelativeToolTip": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml.cs",
+              "ViewState": "AgIAAOwBAAAAAAAAAAAAAPEBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:28:33.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CarrucelDeNivelesModoHistoria.xaml",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml",
               "RelativeToolTip": "MVVM\\Views\\XAML\\CarrucelDeNivelesModoHistoria.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-16T16:39:52.228Z"
+              "WhenOpened": "2025-06-16T21:19:05.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EscenaHistoriaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Models\\EscenaHistoriaModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\EscenaHistoriaModel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Models\\EscenaHistoriaModel.cs",
+              "RelativeToolTip": "MVVM\\Models\\EscenaHistoriaModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:11:23.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NivelModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Models\\NivelModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\NivelModel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\personal\\EnumaElishApp\\MVVM\\Models\\NivelModel.cs",
+              "RelativeToolTip": "MVVM\\Models\\NivelModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:40:04.314Z"
             }
           ]
         }

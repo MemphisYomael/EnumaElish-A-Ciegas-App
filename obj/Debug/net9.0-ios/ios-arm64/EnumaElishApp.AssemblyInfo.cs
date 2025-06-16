@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnumaElishApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+805e1790f4e3a117a1cc18561c2f5d48ac834e04")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnumaElishApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnumaElishApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

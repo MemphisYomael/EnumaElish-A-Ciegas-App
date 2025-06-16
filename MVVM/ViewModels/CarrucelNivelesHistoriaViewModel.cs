@@ -7,6 +7,7 @@ using EnumaElishApp.MVVM.Views.C_;
 using EnumaElishApp.MVVM.Models;
 using PropertyChanged;
 using Microsoft.Maui.Controls;
+using EnumaElishApp.MVVM.Views.XAML;
 
 namespace EnumaElishApp.MVVM.ViewModels
 {
@@ -16,7 +17,10 @@ namespace EnumaElishApp.MVVM.ViewModels
         public ObservableCollection<CapituloModel> Capitulos { get; set; }
         public ICommand NavegarGameHistoria { get; set; }
         public ICommand MostrarInfoNivel { get; set; }
-
+        //public ICommand HistoriaNarrativaView => new Command((objeto) =>
+        //{
+        //    App.Current.MainPage.Navigation.PushAsync(new HistoriaNarrativaView((NivelModel)objeto));
+        //});
         public CarrucelNivelesHistoriaViewModel()
         {
             Capitulos = new ObservableCollection<CapituloModel>();
