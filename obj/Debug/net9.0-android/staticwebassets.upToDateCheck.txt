@@ -1,0 +1,4 @@
+wwwroot\css\app.css
+wwwroot\index.html
+C:\Users\Usuario\Desktop\personal\EnumaElishApp\wwwroot\index.html
+C:\Users\Usuario\Desktop\personal\EnumaElishApp\wwwroot\css\app.css

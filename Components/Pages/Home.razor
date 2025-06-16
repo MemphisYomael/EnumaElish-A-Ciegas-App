@@ -1,0 +1,297 @@
+﻿@page "/"
+
+    <div class="container">
+        <div class="header">
+            <h1>⚔️ ENUMA ELISH ⚔️</h1>
+            <div class="phase-indicator" id="currentPhase">Sala de Espera</div>
+            <p>Juego de Deducción Social</p>
+        </div>
+
+        <!-- Sala de Espera -->
+        <div id="salaEspera" class="game-section active">
+            <div class="card">
+                <h2>🏛️ Sala de Espera</h2>
+                <div class="players-grid" id="playersInLobby">
+                    <div class="player-card host alive">
+                        <h3>👑 Jugador1 (Anfitrión)</h3>
+                        <p>✅ Listo</p>
+                    </div>
+                    <div class="player-card alive">
+                        <h3>🗡️ Jugador2</h3>
+                        <p>❌ No listo</p>
+                    </div>
+                    <div class="player-card alive">
+                        <h3>🏹 Jugador3</h3>
+                        <p>✅ Listo</p>
+                    </div>
+                    <div class="player-card alive">
+                        <h3>🛡️ Jugador4</h3>
+                        <p>✅ Listo</p>
+                    </div>
+                    <div class="player-card alive">
+                        <h3>🔮 Jugador5</h3>
+                        <p>❌ No listo</p>
+                    </div>
+                    <div class="player-card alive">
+                        <h3>⚡ Jugador6</h3>
+                        <p>✅ Listo</p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn btn-success" onclick="toggleReady()">Marcar como Listo</button>
+                    <button class="btn btn-primary" onclick="startGame()">Iniciar Partida (Anfitrión)</button>
+                    <button class="btn btn-danger" onclick="leaveRoom()">Salir de Sala</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reparto de Roles -->
+        <div id="repartoRoles" class="game-section">
+            <div class="role-card">
+                <h2>🎭 Tu Rol Ha Sido Asignado</h2>
+                <h3 id="roleName">Gilgamesh</h3>
+                <p id="roleTeam">Equipo: Enemigos</p>
+                <p id="roleDescription">Eres el Rey de Uruk. Puedes elegir matar a un jugador o silenciar la habilidad de alguien cada noche.</p>
+                <div class="ability-list">
+                    <h4>🔥 Habilidades:</h4>
+                    <div class="ability-item">⚔️ Matar a un jugador (Prioridad 3)</div>
+                    <div class="ability-item">🤫 Silenciar habilidad nocturna (Prioridad 1)</div>
+                </div>
+                <button class="btn btn-primary" onclick="confirmRole()">Entendido</button>
+            </div>
+        </div>
+
+        <!-- Fase de Noche -->
+        <div id="faseNoche" class="game-section">
+            <div class="card">
+                <h2>🌙 Fase de Noche</h2>
+                <div class="timer" id="nightTimer">05:00</div>
+                <p>Los jugadores con habilidades nocturnas pueden actuar ahora...</p>
+                
+                <div class="night-actions">
+                    <div class="action-card" onclick="selectNightAction('kill')">
+                        <h3>⚔️ Matar Jugador</h3>
+                        <p>Elimina a un jugador del juego</p>
+                    </div>
+                    <div class="action-card" onclick="selectNightAction('silence')">
+                        <h3>🤫 Silenciar Habilidad</h3>
+                        <p>Bloquea la habilidad de un jugador esta noche</p>
+                    </div>
+                </div>
+
+                <div id="targetSelection" style="display: none;">
+                    <h3>Selecciona tu objetivo:</h3>
+                    <div class="players-grid">
+                        <div class="player-card alive" onclick="selectTarget('player2')">🗡️ Jugador2</div>
+                        <div class="player-card alive" onclick="selectTarget('player3')">🏹 Jugador3</div>
+                        <div class="player-card alive" onclick="selectTarget('player4')">🛡️ Jugador4</div>
+                        <div class="player-card alive" onclick="selectTarget('player5')">🔮 Jugador5</div>
+                        <div class="player-card alive" onclick="selectTarget('player6')">⚡ Jugador6</div>
+                    </div>
+                    <button class="btn btn-success" onclick="confirmNightAction()">Confirmar Acción</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amanecer -->
+        <div id="amanecer" class="game-section">
+            <div class="death-announcement">
+                <h2>☀️ Amanecer</h2>
+                <h3>💀 Resultados de la Noche</h3>
+                <p><strong>Jugador3 (🏹) ha muerto durante la noche</strong></p>
+                <p>Su rol era: <strong>Violet - Investigadora del Pueblo</strong></p>
+            </div>
+            <div class="results-panel">
+                <p>✨ Jugador5 fue revivido por AQUA</p>
+            </div>
+            <button class="btn btn-primary" onclick="proceedToDiscussion()">Continuar al Día</button>
+        </div>
+
+        <!-- Discusión -->
+        <div id="discusion" class="game-section">
+            <div class="card">
+                <h2>💬 Fase de Discusión</h2>
+                <div class="timer" id="discussionTimer">10:00</div>
+                <p>Los jugadores vivos pueden debatir sobre lo ocurrido...</p>
+                
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div><strong>Jugador1:</strong> ¿Alguien vio algo sospechoso anoche?</div>
+                        <div><strong>Jugador2:</strong> Creo que Jugador4 está actuando raro...</div>
+                        <div><strong>Jugador4:</strong> ¡Yo solo estoy tratando de ayudar al pueblo!</div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Escribe tu mensaje..." id="chatInput">
+                        <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+                    </div>
+                </div>
+                
+                <button class="btn btn-warning" onclick="proceedToVoting()">Proceder a Votación</button>
+            </div>
+        </div>
+
+        <!-- Votación -->
+        <div id="votacion" class="game-section">
+            <div class="card">
+                <h2>🗳️ Fase de Votación</h2>
+                <p>Vota por el jugador que quieres linchar:</p>
+                
+                <div class="voting-section">
+                    <div class="vote-option" onclick="selectVote('player1')">
+                        <h3>👑 Jugador1</h3>
+                        <p>0 votos</p>
+                    </div>
+                    <div class="vote-option" onclick="selectVote('player2')">
+                        <h3>🗡️ Jugador2</h3>
+                        <p>2 votos</p>
+                    </div>
+                    <div class="vote-option" onclick="selectVote('player4')">
+                        <h3>🛡️ Jugador4</h3>
+                        <p>1 voto</p>
+                    </div>
+                    <div class="vote-option" onclick="selectVote('player5')">
+                        <h3>🔮 Jugador5</h3>
+                        <p>0 votos</p>
+                    </div>
+                    <div class="vote-option" onclick="selectVote('player6')">
+                        <h3>⚡ Jugador6</h3>
+                        <p>1 voto</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-danger" onclick="enterArena()">Confirmar Voto (Ir a Arena)</button>
+            </div>
+        </div>
+
+        <!-- Arena de Combate -->
+        <div id="arena" class="game-section">
+            <div class="arena-container">
+                <h2>⚔️ ARENA DE COMBATE</h2>
+                <p>¡Lucha por tu voto! Recolecta esferas del mismo color para atacar</p>
+                
+                <div class="fighters">
+                    <div class="fighter">
+                        <div class="fighter-avatar">👑</div>
+                        <h3>Jugador1 (Tú)</h3>
+                        <div class="health-bar">
+                            <div class="health-fill" style="width: 75%;"></div>
+                        </div>
+                        <p>HP: 75/100</p>
+                    </div>
+                    <div style="font-size: 2em;">⚡VS⚡</div>
+                    <div class="fighter">
+                        <div class="fighter-avatar">🗡️</div>
+                        <h3>Jugador2</h3>
+                        <div class="health-bar">
+                            <div class="health-fill" style="width: 60%;"></div>
+                        </div>
+                        <p>HP: 60/100</p>
+                    </div>
+                </div>
+
+                <div class="orbs-container">
+                    <div class="orb red" onclick="collectOrb('red')"></div>
+                    <div class="orb blue" onclick="collectOrb('blue')"></div>
+                    <div class="orb green" onclick="collectOrb('green')"></div>
+                    <div class="orb yellow" onclick="collectOrb('yellow')"></div>
+                    <div class="orb red" onclick="collectOrb('red')"></div>
+                    <div class="orb blue" onclick="collectOrb('blue')"></div>
+                </div>
+
+                <div class="attack-buttons">
+                    <button class="attack-btn" onclick="attack('fire')" disabled>
+                        🔥 Ataque de Fuego<br>(Requiere 3 esferas rojas)
+                    </button>
+                    <button class="attack-btn" onclick="attack('water')" disabled>
+                        💧 Ataque de Agua<br>(Requiere 3 esferas azules)
+                    </button>
+                    <button class="attack-btn" onclick="attack('earth')" disabled>
+                        🌍 Ataque de Tierra<br>(Requiere 3 esferas verdes)
+                    </button>
+                    <button class="attack-btn" onclick="attack('light')" disabled>
+                        ⭐ Ataque de Luz<br>(Requiere 3 esferas amarillas)
+                    </button>
+                </div>
+
+                <div class="combat-log">
+                    <div><strong>Sistema:</strong> ¡El combate ha comenzado!</div>
+                    <div><strong>Jugador1:</strong> Recolecta esferas rojas...</div>
+                    <div><strong>Jugador2:</strong> Usa Ataque de Agua - 25 de daño</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Juicio -->
+        <div id="juicio" class="game-section">
+            <div class="card">
+                <h2>⚖️ Fase de Juicio</h2>
+                
+                <div class="results-panel">
+                    <h3>📊 Resultados de la Votación</h3>
+                    <p><strong>Jugador2</strong> ha sido elegido para ser linchado con 3 votos</p>
+                    <p>Su rol era: <strong>Rey - Enemigo</strong></p>
+                </div>
+                
+                <div class="death-announcement">
+                    <h3>💀 Jugador2 (Rey) ha sido linchado</h3>
+                    <p>Los enemigos pierden un miembro...</p>
+                </div>
+                
+                <button class="btn btn-primary" onclick="nextRound()">Continuar a la Siguiente Ronda</button>
+            </div>
+        </div>
+
+        <!-- Fin de Juego -->
+        <div id="finJuego" class="game-section">
+            <div class="results-panel">
+                <h2>🎉 ¡FIN DEL JUEGO!</h2>
+                <h3>🏆 ¡Victoria del Pueblo!</h3>
+                <p>Todos los enemigos han sido eliminados</p>
+            </div>
+            
+            <div class="card">
+                <h3>📜 Revelación de Roles</h3>
+                <div class="role-reveal">
+                    <div class="revealed-role">
+                        <h4>👑 Jugador1</h4>
+                        <p><strong>Gilgamesh</strong></p>
+                        <p>Enemigo - Vivo</p>
+                    </div>
+                    <div class="revealed-role">
+                        <h4>🗡️ Jugador2</h4>
+                        <p><strong>Rey</strong></p>
+                        <p>Enemigo - Muerto</p>
+                    </div>
+                    <div class="revealed-role">
+                        <h4>🏹 Jugador3</h4>
+                        <p><strong>Violet</strong></p>
+                        <p>Pueblo - Muerto</p>
+                    </div>
+                    <div class="revealed-role">
+                        <h4>🛡️ Jugador4</h4>
+                        <p><strong>Enkidu</strong></p>
+                        <p>Pueblo - Vivo</p>
+                    </div>
+                    <div class="revealed-role">
+                        <h4>🔮 Jugador5</h4>
+                        <p><strong>AQUA</strong></p>
+                        <p>Pueblo - Vivo</p>
+                    </div>
+                    <div class="revealed-role">
+                        <h4>⚡ Jugador6</h4>
+                        <p><strong>Tigre</strong></p>
+                        <p>Pueblo - Vivo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="btn btn-primary" onclick="newGame()">Nueva Partida</button>
+                <button class="btn btn-danger" onclick="exitGame()">Salir</button>
+            </div>
+        </div>
+    </div>
+
+@code{     
+  
+ }
